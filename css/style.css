@@ -4,7 +4,8 @@ body{
 }
 *{
     font-family: 'Inter', sans-serif;
-    box-sizing: border-box
+    box-sizing: border-box;
+    scroll-behavior: smooth
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 :root{
@@ -34,6 +35,9 @@ body{
 }
 .nav-item:active{
     opacity: 0.5;
+}
+.nav-item--active{
+    color: var(--color);
 }
 .title{
     color: white;
@@ -153,6 +157,7 @@ header.sticky{
 .about{
     width: 80%;
     margin: 0 auto;
+    padding-top: 100px;
 }
 .about-content{
     width: 80%;
@@ -160,7 +165,7 @@ header.sticky{
     font-size: 24px;
     color: var(--text);
     font-weight: 700;
-    margin-top: 100px;
+    padding-top: 80px;
 }
 .about-text-hover{
     color: var(--color);
@@ -220,11 +225,8 @@ header.sticky{
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-left: 35px;
+    padding-left: 35px;
     transition: 0.2s;
-}
-.greetings-social a:hover{
-    opacity: 0.7;
 }
 .greetings-social a:active{
     opacity: 0.5;
@@ -232,9 +234,12 @@ header.sticky{
 .projects{
     width: 80%;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 140px;
     display: flex;   
     flex-direction: column;
+}
+.projects .block-title h2{
+    padding-bottom: 4px;
 }
 .projects-block{
     display: flex;
@@ -264,12 +269,14 @@ header.sticky{
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Russo One', sans-serif;
     
 }
 .projects-git{
     color: var(--color);
     text-decoration: none;
     font-size: 28px;
+    font-family: 'Russo One', sans-serif;
 }
 .projects-open-block{
     gap: 20px;
@@ -279,6 +286,7 @@ header.sticky{
 .contact{
     width: 80%;
     margin: 0 auto;
+    padding-top: 100px;
 }
 .contact-content{
     display: flex;
@@ -308,4 +316,5 @@ footer p{
     margin: 0;
     padding: 20px;
     color: var(--text);
+    font-family: 'Russo One', sans-serif;
 }

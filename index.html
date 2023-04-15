@@ -13,15 +13,15 @@
 <body>  
     <div class="container">
         <header>
-            <a href="" class="title"><span>Dan </span>Website</a>
-            <div class="header-nav">
-                <a href="" class="nav-item">About</a>
-                <a href="" class="nav-item">Skills</a>
-                <a href="" class="nav-item">Projects</a>
-                <a href="" class="nav-item">Contact</a>
-            </div>
+            <a href="#title" class="title"><span>Dan </span>Website</a>
+            <nav class="header-nav">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
         </header>
-        <div class="content">
+        <div id="title"  class="content">
             <div class="greetings-container">
                 <div class="greetings">
                         <div class="greetings-titles">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-            <div class="about">
+            <section id="about" class="about">
                 <div class="block-title">
                     <h2>About Me</h2>
                     <p>SOME INFO</p>
@@ -51,8 +51,8 @@
                         Figma. Also i`m proficient with HTML, CSS, JS, VSCode and more.Undoubtedly,
                         I'm a beginner, but I'm promising, and I take tasks seriously and work to the best of my ability.</p>
                 </div>
-            </div>
-            <div class="skills">
+            </section>
+            <section id="skills" class="skills">
                 <div class="block-title">
                     <h2>Tech Stack</h2>
                     <p>MY SKILLS</p>
@@ -102,8 +102,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="projects">
+            </section>
+            <section id="projects" class="projects">
                 <div class="block-title">
                     <h2>My Projects</h2>
                     <p>JUST LOOK</p>
@@ -152,8 +152,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-                <div class="contact">
+            </section>
+                <section id="contact" class="contact">
                     <div class="block-title">
                         <h2>Contact Me</h2>
                         <p>SAY HELLO</p>
@@ -174,13 +174,12 @@
                             </div>
                         </div>
                     </div>
-                </div>      
+                </section>      
             </div>
             <footer>
                 <p>Dan Vakhniuk © 2023</p>
             </footer>
         </div>
     <script src="js/script.js"></script>
-    <script src="particles.js"></script>
 </body>
 </html>
