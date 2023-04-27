@@ -5,7 +5,7 @@ body{
 *{
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 :root{
@@ -50,7 +50,7 @@ body{
     font-weight: 400;
 }
 .content{
-    width: 1280px;
+    max-width: 1280px;
     height: 100%;
     margin: 0 auto;
     background: var(--background);
@@ -182,7 +182,7 @@ header.sticky{
 }
 .skills-line{
     width: 5px;
-    height: 244px;
+    height: inherit;
     background: var(--color);
     border-radius: 30px;
 }
@@ -191,8 +191,9 @@ header.sticky{
     margin-left: 80px;
 }
 .skills-stack{
-    display: grid;
-    grid: 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
     gap: 30px;
 }
 .skills-block:nth-child(2) img{
@@ -307,7 +308,7 @@ header.sticky{
     font-weight: bold;
 }
 footer{
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     background: #302e2e;
 }
@@ -317,4 +318,234 @@ footer p{
     padding: 20px;
     color: var(--text);
     font-family: 'Russo One', sans-serif;
+}
+.burger-nav{
+    display: none;
+    cursor: pointer;
+}
+.burger-bar{
+    display: block;
+    background: #fff;
+    width: 35px;
+    height: 3px;
+    margin: 6px auto;
+    -webkit-transition: all 0.1s ease-in-out;
+}
+.skills-block{
+    width: 90px;
+}
+@media screen and (min-width:1024px) {
+    .greetings{
+        grid: 1fr 150px 50px 0px/ 1fr 1fr ;
+    }
+@media screen and (max-width:1280px){
+    .greetings-img{
+        width: 600px;
+    }
+    .greetings-title{
+        font-size: 64px;
+        text-align: start;
+        margin-left: 65px;
+    }
+}   
+}
+@media screen and (max-width:1024px){
+    .greetings{
+        grid: 350px 200px 80px 64px 90px / 1fr;
+        padding-top: 114px;
+    }
+    .greetings-titles{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .greetings-img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 600px;
+    }
+    .greetings-text{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .greetings-contact{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    .greetings-title:nth-child(1){
+        margin-top: 0;
+    }
+    .greetings *{
+        margin: 0 auto;
+    }
+    .greetings-title{
+        font-size: 64px;
+        text-align: start;
+        margin-left: 0px;
+    }
+    .greetings-social{
+        padding-left: 0;
+    }
+    .projects-block{
+        flex-direction: column;
+        max-width: 608px;
+        margin: 0 auto;
+    }
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .skills{
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .skills-line{
+        display: none;
+    }
+    .about-content{
+        padding-top: 20px;
+    }
+    .nav-item--active{
+        color: var(--text);
+    }
+    .skills-content{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .greetings{
+        grid: auto auto auto 64px 90px / 1fr;
+        padding-top: 114px;
+    }
+    .greetings-titles{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .greetings-img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 600px;
+    }
+    .greetings-text{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 10px;
+    }
+    .greetings-contact{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    .greetings *{
+        margin: 0 auto;
+    }
+    .greetings-title{
+        font-size: 64px;
+        text-align: start;
+        margin-left: 0px;
+    }
+    .greetings-social{
+        padding-left: 0;
+    }
+    .projects-block{
+        flex-direction: column;
+        max-width: 608px;
+        margin: 0 auto;
+    }
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .burger-nav{
+        display: block;
+    }
+    .burger-nav:active .burger-bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger-nav:active .burger-bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger-nav:active .burger-bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .header-nav{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background: var(--container);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 0.3s;
+        justify-content: center;
+    }
+    .header-nav a{
+        margin: 16px 0;
+        font-size: 30px;    
+    }
+    .header-nav.active{
+        left: 0;
+    }
+    header.sticky{
+        height: 80px;
+    }
+    .greetings-img{
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+    }
+    .projects-block img{
+        width: 100%;
+        height: auto;
+    }
+    .greetings-container{
+        height: auto;
+    }
+    .contact-content{
+        flex-direction: column;
+    }
+    .about-text{
+        text-align: center;
+    }
+    
+    .skills-stack{
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width:424px){
+    .greetings-title{
+        font-size: 50px;
+    }
+    .contact-text{
+        font-size: 14px;
+    }
+    .greetings-contact{
+        width: 90%;
+        height: auto;
+    }
+    .title{
+        font-size: 28px;
+    }
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .skills{
+        align-items: start;
+    }
+    .about-content{
+        width: 100%;
+    }
+    .greetings-text{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
 }

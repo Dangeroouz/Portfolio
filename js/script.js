@@ -22,3 +22,16 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('section').forEach(
     (section) => observer.observe(section))
+
+let hamburger = document.querySelector('.burger-nav')
+let navMenu = document.querySelector('.header-nav')
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active')
+})
+document.querySelectorAll('.nav-item').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active')
+    navMenu.classList.remove('active')
+    
+}))
