@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>  
     <div class="container">
@@ -30,7 +31,7 @@
             </nav>
         </header>
         <div id="title"  class="content">
-            <div class="greetings-container">
+            <div class="greetings-container" data-aos="fade-in">
                 <div class="greetings">
                         <div class="greetings-titles">
                             <h2 class="greetings-title">Front-End</h2>
@@ -38,7 +39,7 @@
                         </div>
                         <p class="greetings-text">HI. I'm Dan Vakhniuk. A passionate Front-end Developer
                         based in Ivano-Frankivsk, Ukraine</p>
-                        <button class="greetings-contact">Contact Me!</button>
+                        <a href="#contact" class="greetings-contact">Contact Me!</a>
                     
                         <img class="greetings-img" src="img/portfolioPhoto (1).png" alt="">
                         <div class="greetings-social">
@@ -53,7 +54,7 @@
                     <p>SOME INFO</p>
                 </div>
                 <div class="about-content">
-                    <p class="about-text">I`m Dan, web developer from Ukraine. I have been coding since 2018 and
+                    <p class="about-text" data-aos="fade-right">I`m Dan, web developer from Ukraine. I have been coding since 2018 and
                         passionate about it. I can<span class="about-text-hover"> plan, design, build, launch, and maintain</span>
                         a website myself. Always write clean and readable code. Design sites at
                         Figma. Also i`m proficient with HTML, CSS, JS, VSCode and more.Undoubtedly,
@@ -118,44 +119,44 @@
                 </div>
                 <div class="projects-content">
                     <div class="projects-block">
-                        <div>
+                        <div data-aos="fade-right">
                             <img src="img/project1.png" alt="">
                         </div>
-                        <div class="projects-text">
+                        <div class="projects-text" data-aos="fade-left">
                             <h2>SEEDRA</h2>
-                            <p>I created CSS Art Challenge to help people discover that CSS can be fun and more than just creating basic layouts by competing in monthly challenges and winning prizes!
+                            <p>I made this site for a company that sells seeds for various plants. For example: corn, spinach, cilantro. In it, I applied the seed filter by group.
                             </p>
                             <div class="projects-open-block">
-                                <a href="" class="projects-live">Live</a>
-                                <a href="" class="projects-git">GitHub</a>
+                                <a href="https://dangeroouz.github.io/SEEDRA/" class="projects-live">Live</a>
+                                <a href="https://github.com/Dangeroouz/SEEDRA" class="projects-git">GitHub</a>
                             </div>
                         </div>
                     </div>
                     <div class="projects-block">
                         <div>
-                            <img src="img/project2.png" alt="">
+                            <img src="img/project2.png" data-aos="fade-right" alt="">
                         </div>
-                        <div class="projects-text">
+                        <div class="projects-text" data-aos="fade-left">
                             <h2>MyClass</h2>
-                            <p>I created CSS Art Challenge to help people discover that CSS can be fun and more than just creating basic layouts by competing in monthly challenges and winning prizes!
+                            <p>Programming courses in which there is a filter for selecting courses by specialty, changing the topic, sorting by price and changing to tabular mode
                             </p>
                             <div class="projects-open-block">
-                                <a href="" class="projects-live">Live</a>
-                                <a href="" class="projects-git">GitHub</a>
+                                <a href="https://dangeroouz.github.io/MyClass/" class="projects-live">Live</a>
+                                <a href="https://github.com/Dangeroouz/MyClass" class="projects-git">GitHub</a>
                             </div>
                         </div>
                     </div>
                     <div class="projects-block">
                         <div>
-                            <img src="img/project3.png" alt="">
+                            <img src="img/project3.png" alt="" data-aos="fade-right">
                         </div>
-                        <div class="projects-text">
+                        <div class="projects-text" data-aos="fade-left">
                             <h2>YOGA</h2>
-                            <p>I created CSS Art Challenge to help people discover that CSS can be fun and more than just creating basic layouts by competing in monthly challenges and winning prizes!
+                            <p>The site of a yoga hall where you can sign up for classes, look at trainers, prices for classes and reviews from customers
                             </p>
                             <div class="projects-open-block">
-                                <a href="" class="projects-live">Live</a>
-                                <a href="" class="projects-git">GitHub</a>
+                                <a href="https://dangeroouz.github.io/yoga/" class="projects-live">Live</a>
+                                <a href="https://github.com/Dangeroouz/yoga" class="projects-git">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -167,14 +168,14 @@
                         <p>SAY HELLO</p>
                     </div>
                     <div class="contact-content">
-                        <div class="contact-block">
+                        <div class="contact-block" data-aos="fade-in">
                             <img src="img/location.png" alt="location">
                             <div class="contact-text">
                                 <p>Location:</p>
                                 <p>Ivano-Frankivsk, Ukraine</p>
                             </div>
                         </div>
-                        <div class="contact-block">
+                        <div class="contact-block" data-aos="fade-in">
                             <img src="img/mail.png" alt="mail">
                             <div class="contact-text">
                                 <p>Mail:</p>
@@ -189,5 +190,12 @@
             </footer>
         </div>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
 </body>
 </html>
