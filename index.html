@@ -31,7 +31,7 @@
             </nav>
         </header>
         <div id="title"  class="content">
-            <div class="greetings-container" data-aos="fade-in">
+            <div class="greetings-container" >
                 <div class="greetings">
                         <div class="greetings-titles">
                             <h2 class="greetings-title">Front-End</h2>
@@ -118,11 +118,11 @@
                     <p>JUST LOOK</p>
                 </div>
                 <div class="projects-content">
-                    <div class="projects-block">
-                        <div data-aos="fade-right">
-                            <img src="img/project1.png" alt="">
+                    <div data-aos="fade-in" class="projects-block">
+                        <div>
+                            <img  src="img/project1.png" alt="">
                         </div>
-                        <div class="projects-text" data-aos="fade-left">
+                        <div class="projects-text">
                             <h2>SEEDRA</h2>
                             <p>I made this site for a company that sells seeds for various plants. For example: corn, spinach, cilantro. In it, I applied the seed filter by group.
                             </p>
@@ -132,11 +132,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projects-block">
+                    <div data-aos="fade-in" class="projects-block">
                         <div>
-                            <img src="img/project2.png" data-aos="fade-right" alt="">
+                            <img src="img/project2.png" alt="">
                         </div>
-                        <div class="projects-text" data-aos="fade-left">
+                        <div class="projects-text">
                             <h2>MyClass</h2>
                             <p>Programming courses in which there is a filter for selecting courses by specialty, changing the topic, sorting by price and changing to tabular mode
                             </p>
@@ -146,11 +146,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projects-block">
+                    <div data-aos="fade-in" class="projects-block">
                         <div>
-                            <img src="img/project3.png" alt="" data-aos="fade-right">
+                            <img src="img/project3.png" alt="">
                         </div>
-                        <div class="projects-text" data-aos="fade-left">
+                        <div class="projects-text" >
                             <h2>YOGA</h2>
                             <p>The site of a yoga hall where you can sign up for classes, look at trainers, prices for classes and reviews from customers
                             </p>
@@ -183,7 +183,27 @@
                             </div>
                         </div>
                     </div>
-                </section>      
+                    <div class="contact-form">
+                        <div class="contact-form-container">
+                            <h2>Write me Message!</h2>
+                            <form id="contact-group-js">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name:</label>
+                                    <input type="text" id="fullName" name="full_name" placeholder="John Pork" required >
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="johnpork@email.com" required >
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" rows="10" placeholder="Write your message ..." required ></textarea>
+                                </div>
+                                <button type="submit" class="contact-submit">Send Message</button>
+                            </form>
+                        </div>
+                    
+                </section>     
             </div>
             <footer>
                 <p>Dan Vakhniuk © 2023</p>

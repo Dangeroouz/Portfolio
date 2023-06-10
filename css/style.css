@@ -128,7 +128,8 @@ header.sticky{
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 10px;
+    height: 60px;
 }
 .greetings-contact:hover{
     background: var(--color);
@@ -168,7 +169,7 @@ header.sticky{
     font-size: 24px;
     color: var(--text);
     font-weight: 700;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 .about-text-hover{
     color: var(--color);
@@ -179,7 +180,7 @@ header.sticky{
 .skills{
     width: 80%;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 100px;
     display: flex;
     align-items: center;
 }
@@ -271,7 +272,10 @@ header.sticky{
     padding-left: 20px;
     padding-right: 20px;
     font-family: 'Russo One', sans-serif;
-    
+}
+.projects-live:hover{
+    color: white;
+    transition: 0.2s;
 }
 .projects-git{
     color: var(--color);
@@ -334,6 +338,46 @@ footer p{
 .skills-block{
     width: 90px;
 }
+.contact-form{
+    padding-bottom: 50px;
+}
+.contact-form-container{
+    border: 1px solid var(--color);
+    border-radius: 20px;
+    padding: 20px;
+}
+.form-group label, textarea, input{
+    width: 100%;
+    border-radius: 5px;
+}
+.contact-form-container h2{
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+.form-group label{
+    color: var(--text);
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group:last-child{
+    margin-bottom: 0;
+}
+.contact-submit{
+    background: var(--text);
+    color: var(--container);
+    width: 150px;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media screen and (min-width:1280px){
+    .contact-form-container{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
 @media screen and (min-width:1024px) {
     .greetings{
         grid: 1fr 150px 50px 0px/ 1fr 1fr ;
@@ -346,6 +390,10 @@ footer p{
         font-size: 64px;
         text-align: start;
         margin-left: 65px;
+    }
+    .contact-form-container{
+        width: 70%;
+        margin: 0 auto;
     }
 }   
 }
@@ -373,7 +421,7 @@ footer p{
     .greetings-contact{
         grid-row: 4/5;
         grid-column: 1/2;
-        height: 50px;
+        height: 60px;
     }
     .greetings-title:nth-child(1){
         margin-top: 0;
@@ -424,6 +472,10 @@ footer p{
     }
     .projects-text{
         padding: 10px;
+    }
+    .contact-form-container{
+        width: 80%;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width:768px){
@@ -533,6 +585,10 @@ footer p{
     }
     .contact-block{
         margin-top: 20px;
+    }
+    .contact-form-container{
+        width: 100%;
+        margin: 0 auto;
     }
     
 }

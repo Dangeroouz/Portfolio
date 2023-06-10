@@ -35,3 +35,29 @@ document.querySelectorAll('.nav-item').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active')
     
 }))
+
+const $contactForm = document.querySelector('#contact-group-js')
+$contactForm.addEventListener('submit', handleSubmit)
+async function handleSubmit(e){
+    e.preventDefault()
+    const $form = e.target,
+        $fullname = $form.querySelector('#fullName'),
+        $email = $form.querySelector('#email'),
+        $message = $form.querySelector('#message'),
+        response = await fetch('https://api.apispreadsheets.com/data/IVmNkDruNBW1foYw', {
+            method: 'POST',
+            body: JSON.stringify({
+                data: {
+                    full_name: $fullname.value,
+                    email: $email.value,
+                    message: $message.value,
+                }
+            })
+        }
+    )
+    if (response.status === 201) alert('Form Submitted Successfully !')
+    else alert('Please Try Again !')
+
+    $form.reset()
+
+}
