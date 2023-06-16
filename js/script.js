@@ -25,6 +25,7 @@ document.querySelectorAll('section').forEach(
 
 let hamburger = document.querySelector('.burger-nav')
 let navMenu = document.querySelector('.header-nav')
+let successMessage = document.querySelector('.success-message')
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -55,8 +56,12 @@ async function handleSubmit(e){
             })
         }
     )
-    if (response.status === 201) alert('Form Submitted Successfully !')
-    else alert('Please Try Again !')
+    if (response.status === 201){
+        successMessage.classList.remove('hidden')
+}
+    else {
+        successMessage.classList.add('hidden')
+    }
 
     $form.reset()
 
